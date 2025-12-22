@@ -60,7 +60,7 @@ Provide:
     try:
         from google import generativeai as genai
         genai.configure(api_key=api_key)
-        gmodel = genai.GenerativeModel("gemini-1.5-flash")
+        gmodel = genai.GenerativeModel("gemini-pro")
         response = gmodel.generate_content(prompt)
 
         if hasattr(response, "text") and response.text:
@@ -230,3 +230,4 @@ with st.sidebar:
         )
 
     st.markdown("— PumpGuard AI by Tenet Σ")
+

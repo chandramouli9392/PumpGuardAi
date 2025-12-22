@@ -1,8 +1,10 @@
 streamlit
-scikit-learn
-pandas
 numpy
+pandas
+scikit-learn
 joblib
-google-generativeai
 altair
+openai
+
+
 

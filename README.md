@@ -1,176 +1,290 @@
-🛠⚡ PumpGuard AI — Industrial Pump Health Prediction System
+<div align="center">
 
-🔥 Powered by Machine Learning • 📊 Predictive Maintenance • 💥 Built by Tenet Σ
+# 🛠⚡ PumpGuard AI
 
-PumpGuard AI is a smart ML-based system designed to analyze industrial pump health using only 3 core parameters:
+### AI-Powered Industrial Pump Health Prediction System
 
-💠 Vibration (mm/s)
+Predict pump failures before they happen using Machine Learning and real-time sensor readings.
 
-🔥 Temperature (°C)
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/Streamlit-Web_App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+<img src="https://img.shields.io/badge/Machine_Learning-Random_Forest-10B981?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Industrial_AI-Predictive_Maintenance-orange?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Scikit--Learn-ML_Model-F7931E?style=for-the-badge"/>
+</p>
+
+### 🔮 Predict • Detect • Prevent • Maintain
+
+</div>
+
+---
+
+# ✨ Overview
+
+PumpGuard AI is a Machine Learning-powered predictive maintenance system designed to monitor industrial pump health using only three critical operating parameters:
+
+⚙️ Vibration (mm/s)
+
+🌡 Temperature (°C)
 
 ⚡ Motor Current (A)
 
-It predicts whether a pump is:
+The system intelligently predicts the operational status of a pump and helps engineers identify risks before failures occur.
 
-🟢 HEALTHY
+---
 
-🟠 WARNING
+# 🎯 Pump Health Classification
 
-🔴 CRITICAL
+PumpGuard AI classifies pumps into:
 
-This system helps industries reduce downtime, detect risks early, and maintain operational safety — all using simple numerical inputs + ML intelligence.
+🟢 **HEALTHY**
 
-🌟 ✨ Features (Sigma Edition)
+🟠 **WARNING**
 
-🧠 ML-powered Pump Health Classification
+🔴 **CRITICAL**
 
-📈 Failure Risk Score
+and provides:
 
-📊 Vibration–Temperature–Current based prediction
+✅ Failure Risk Score
 
-🛠 Actionable maintenance recommendations
+✅ Maintenance Recommendations
 
-🎛 Clean & modern Streamlit UI
+✅ Predictive Maintenance Insights
 
-⚡ Lightweight & deployable to Streamlit Cloud
+✅ Real-Time Decision Support
 
-🔒 Safe — No external API dependence
+---
 
-🚀 Offline compatible (uses only your trained model)
+# 🚀 Key Features
 
-📁 Project Structure (Σ Organized)
+### 🧠 Machine Learning Prediction
+
+* Random Forest Classification
+* Real-Time Pump Assessment
+* Predictive Failure Detection
+* Multi-Parameter Analysis
+
+### 📊 Smart Monitoring
+
+* Vibration Analysis
+* Temperature Monitoring
+* Current Consumption Tracking
+* Health Score Calculation
+
+### 🛠 Maintenance Intelligence
+
+* Repair Recommendations
+* Failure Risk Assessment
+* Preventive Maintenance Guidance
+* Operational Health Insights
+
+### 🌐 Deployment Ready
+
+* Streamlit Dashboard
+* Lightweight Architecture
+* Offline Compatible
+* No External APIs
+
+---
+
+# 📸 Dashboard Preview
+
+### Pump Health Analysis
+
+```text
+Pump Status: WARNING
+
+Failure Risk: 68%
+
+Recommendation:
+Inspect bearing condition and vibration levels.
+```
+
+### Critical Alert Example
+
+```text
+Pump Status: CRITICAL
+
+Failure Risk: 92%
+
+Recommendation:
+Immediate maintenance required.
+Potential motor or bearing failure detected.
+```
+
+---
+
+# 🏗 Project Structure
+
+```text
 PumpGuard-AI/
-│── app.py                # Streamlit interface
-│── train_model.py        # ML training script
-│── requirements.txt      # Dependencies
-│── data/
-│     └── pumphealth.csv  # Your dataset
-│── model/
-│     ├── pump_model.pkl
-│     ├── scaler.pkl
-│     └── feature_meta.json
-│── README.md
+│
+├── app.py
+├── train_model.py
+├── requirements.txt
+│
+├── data/
+│   └── pumphealth.csv
+│
+├── model/
+│   ├── pump_model.pkl
+│   ├── scaler.pkl
+│   └── feature_meta.json
+│
+└── README.md
+```
 
-🧠 How PumpGuard AI Works
-1️⃣ Training the ML Model
+---
 
-Uses RandomForestClassifier to learn pump conditions from:
+# ⚙️ Technologies Used
 
-⚙️ vibration
+| Category         | Technologies             |
+| ---------------- | ------------------------ |
+| Frontend         | Streamlit                |
+| Machine Learning | Scikit-Learn             |
+| Data Processing  | Pandas, NumPy            |
+| Model Storage    | Joblib                   |
+| Algorithm        | Random Forest Classifier |
+| Language         | Python                   |
 
-🌡 temperature
+---
 
-🔌 current
+# 🧠 How It Works
 
-🏷 label (HEALTHY/WARNING/FAIL)
+### Step 1 — Train Model
 
-Run the training:
+The system learns from historical pump sensor data:
 
+* Vibration
+* Temperature
+* Motor Current
+
+```bash
 python train_model.py --csv data/pumphealth.csv --out model
+```
 
+Generated Artifacts:
 
-This creates:
-
+```text
 model/
-  pump_model.pkl
-  scaler.pkl
-  feature_meta.json
+├── pump_model.pkl
+├── scaler.pkl
+└── feature_meta.json
+```
 
-2️⃣ Running the Streamlit App
+---
 
-Start the UI:
+### Step 2 — Launch Dashboard
 
+```bash
 streamlit run app.py
+```
 
+Enter:
 
-Enter your parameters:
+* Vibration
+* Temperature
+* Current
 
-Vibration
+Get:
 
-Temperature
+* Health Prediction
+* Risk Score
+* Maintenance Recommendations
 
-Motor Current
+---
 
-Then PumpGuard AI outputs:
+# 📦 Installation
 
-🟢🟠🔴 Pump Status
+### Clone Repository
 
-📈 Failure Risk Probability
+```bash
+git clone https://github.com/chandramouli9392/PumpGuard-AI.git
+cd PumpGuard-AI
+```
 
-🛠 Maintenance Suggestions
+### Install Dependencies
 
-📦 Installation (Σ Simple)
-
-Install required libraries:
-
+```bash
 pip install -r requirements.txt
+```
 
+Required Libraries:
 
-Requirements:
-
+```text
 streamlit
 scikit-learn
 pandas
 numpy
 joblib
+```
 
+---
 
-(No external API needed ✔)
-(No internet dependency ✔)
+# ☁️ Deployment
 
-🎨 UI Highlights
+### Streamlit Cloud
 
-⚡ Minimal & fast
+1. Push project to GitHub
+2. Login to Streamlit Cloud
+3. Select repository
+4. Choose:
 
-🔢 Easy numeric inputs
+```text
+app.py
+```
 
-🟩🟧🟥 Color-coded output
+5. Click Deploy 🚀
 
-🛠 Clear maintenance advice
+---
 
-🎯 Industrial-ready
+# 📈 Why PumpGuard AI?
 
-🚀 Deploy to Streamlit Cloud
+### Business Benefits
 
-Push your project folder to GitHub
+💰 Reduce Maintenance Costs
 
-Go to https://streamlit.io/cloud
+⚙️ Improve Equipment Reliability
 
-Choose your repo
+📉 Reduce Downtime
 
-Click Deploy
+🛠 Enable Predictive Maintenance
 
-Boom — PumpGuard AI goes live. ⚡🔥
+🏭 Improve Industrial Productivity
 
-🧪 Model Training Script Summary (train_model.py)
+🧠 AI-Powered Decision Making
 
-Loads CSV
+---
 
-Encodes labels (HEALTHY/WARNING/FAIL)
+# 🔮 Future Roadmap
 
-Scales features
+* [ ] Deep Learning Models
+* [ ] Real-Time IoT Integration
+* [ ] MQTT Sensor Streaming
+* [ ] Dashboard Analytics
+* [ ] Multi-Pump Monitoring
+* [ ] Failure Trend Forecasting
+* [ ] Mobile Application
+* [ ] Cloud Monitoring Platform
 
-Trains RandomForest
+---
 
-Saves model + scaler + metadata
+# 👨‍💻 Developer
 
-Simple, clean, fast. ⚙️
+### Boppana Chandramouli
 
-🏆 Why PumpGuard AI?
+AI Engineer • Machine Learning Enthusiast • Industrial AI Developer
 
-🔮 Predict pump failures earlier
+GitHub:
+https://github.com/chandramouli9392
 
-🛠 Reduce repair cost
+---
 
-⚙️ Improve reliability
+<div align="center">
 
-🧠 Use AI for smart maintenance
+### ⭐ Star this repository if you found it useful
 
-💸 Zero API cost
+Built with ❤️ using Python, Streamlit, Scikit-Learn & Predictive Maintenance AI
 
-🟢 Works even offline
-
-👨‍💻 Developer (Σ Authority Mode)
-
-Built with precision and intelligence by Tenet Σ
-ML • Data Science • AI Systems • Industrial Automation
+</div>
